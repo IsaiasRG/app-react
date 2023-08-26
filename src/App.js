@@ -1,5 +1,5 @@
-import {NavBar} from './components/NavBar/NavBar';
-import {Titulo} from './components/Titulo/Titulo';
+import NavBar from './components/NavBar/NavBar';
+import Titulo from './components/Titulo/Titulo';
 
 function App() {
   return (
