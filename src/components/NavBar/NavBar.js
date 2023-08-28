@@ -1,4 +1,6 @@
-export const NavBar = () => {
+const NavBar = () => {
+
+  return (
         <nav id="naveg">
           <ul className="lista-nav">
             <li><a href="./index.html" className="links active">Inicio</a></li>
@@ -6,6 +8,8 @@ export const NavBar = () => {
           </ul>
          
         </nav>
+
+  )
      
 };
 

@@ -4,8 +4,10 @@ import Titulo from './components/Titulo/Titulo';
 function App() {
   return (
     <body>
-      <Titulo />
+
       <NavBar />
+      <Titulo />
+      
     </body>
   );
 }
