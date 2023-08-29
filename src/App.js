@@ -1,5 +1,6 @@
 import NavBar from './components/NavBar/NavBar';
 import Titulo from './components/Titulo/Titulo';
+import Idolos from './components/ItemListContainer/Idolos';
 
 function App() {
   return (
@@ -7,6 +8,7 @@ function App() {
 
       <NavBar />
       <Titulo />
+      <Idolos />
       
     </body>
   );
