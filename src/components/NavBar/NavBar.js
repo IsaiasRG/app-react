@@ -24,7 +24,9 @@ const NavBar = () => {
   return (
         <nav id="naveg">
           <ul className="lista-nav">
-            {router.map((route))}
+          {router.map((route) => {
+          <Link to={route.path}  className="links">{route.title}</Link>
+            })}
           </ul>
 
           <CartWidget />
@@ -34,5 +36,6 @@ const NavBar = () => {
   )
      
 };
+
 
 export default NavBar;

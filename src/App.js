@@ -1,14 +1,13 @@
 import React from 'react';
-import NavBar from './components/NavBar/NavBar';
-import Titulo from './components/Titulo/Titulo';
-import Productos from './components/ItemListContainer/Productos';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import NavBar from './components/NavBar/NavBar';
+import Inicio from './components/pages/Inicio/Inicio';
+import Productos from './components/pages/ItemListContainer/Productos';
+import Item from './components/pages/Details/Item';
 import './App.css';
 
 
   
-
-
 function App() {
 
 
@@ -17,13 +16,14 @@ function App() {
     <BrowserRouter>
       <NavBar />
       <Routes>
-          <Route path='/' element='' />
+          <Route path='/' element = {<Inicio/>} />
+          {/* <Route path='/categorias' element = {<Categorias/>} /> */}
+          <Route path='/producto' element = {<Productos/>} />
+          <Route path='/producto/:id' element = {<Item/>} />
       </Routes>
-      <Titulo />
-      <Productos />
-    
     </BrowserRouter>
   );
 }
+
 
 export default App;

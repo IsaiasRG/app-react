@@ -1,9 +1,9 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { useEffect, useState } from "react";
-import './item-container.css';
-import imagenes from "../img/imagenes";
+import { useState } from "react";
+import { useEffect } from "react";
+import imagenes from "../../img/imagenes";
+import NavBar from "../../NavBar/NavBar";
 
+<NavBar/>
 const losProductos = [
   {
     id: 1,
@@ -123,24 +123,21 @@ const losProductos = [
   },
 ];
 
-const Productos = () => {
-  const  [ prod, setProductos ] = useState([]);
+const Item = () => {
 
-  useEffect(() => {
-    const getProductos = new Promise((resolve) => {
-      setTimeout(() => {
-        resolve(losProductos);
-      }, 3000);
-    });
-    getProductos.then((res) => setProductos(res));
-  }, []);
+    const {produ, setProductobyId} = useState ([]);
 
-  return (
-    <section>
-        {losProductos.map(({
-            id,precio,nombre,categoria,descripcion,foto
-        }) =>(
-            
+    useEffect((id) => {
+        const getProductosbyId = new Promise((resolve) => {
+          setTimeout(() => {
+            const produc = losProductos.find((p) => p.id === id);
+            resolve(produc);
+          }, 3000);
+        });
+        getProductosbyId.then((res) => setProductobyId(res));
+      }, []);
+
+      return (
         <div className='conteiner'>
         <div className='card'>
             <img src={foto} height="100%" width= "300px" alt={nombre}/>
@@ -148,13 +145,10 @@ const Productos = () => {
                 <h1 className="card-title">{nombre} </h1>
                 <p className="card-text">{precio} $</p>
                 <p className="card-text">{descripcion} </p>
-                <Link to = {`/productos/${id}`} className="link">Ver mas detalles</Link>
             </div>
         </div>
     </div>
-        ))}
-    </section>
-  );
+      )
 }
 
-export default Productos;
+export default Item;
