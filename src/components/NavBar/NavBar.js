@@ -1,4 +1,22 @@
 import CartWidget from '../CartWidget/Cartwidget';
+import { Link, NavLink} from 'react-router-dom';
+
+const router = [
+  {
+    path:'/',
+    title: 'Inicio',
+  },
+
+  {
+    path:'/productos',
+    title: 'Productos',
+  },
+
+  {
+    path:'/categorias',
+    title: 'Categorias'
+  }
+]
 
 
 const NavBar = () => {
@@ -6,8 +24,7 @@ const NavBar = () => {
   return (
         <nav id="naveg">
           <ul className="lista-nav">
-            <li><a href="./index.html" className="links active">Inicio</a></li>
-            <li><a href="./pages/tienda.html" className="links">Tienda</a></li>
+            {router.map((route))}
           </ul>
 
           <CartWidget />

@@ -1,0 +1,32 @@
+.conteiner {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px ;
+    padding: 10px;
+}
+
+.conteiner .card {
+    display: flex;
+    justify-content: center;
+    width: 500px;
+    flex-direction: column;
+    
+}
+
+.card-title {
+    color: rgb(27, 18, 106);
+}
+
+.card-text {
+    color: rgb(9, 9, 9);
+}
+
+.link {
+    width: 40px;
+    height: 20px;
+    border-color: rgb(13, 4, 97);
+    border: 1px;
+    background: rgb(255, 255, 255);
+    color: rgb(19, 13, 84);
+    text-decoration: none;
+}

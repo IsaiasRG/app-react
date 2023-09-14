@@ -1,34 +1,28 @@
+import React from 'react';
 import NavBar from './components/NavBar/NavBar';
 import Titulo from './components/Titulo/Titulo';
-import Idolos from './components/ItemListContainer/Idolos';
+import Productos from './components/ItemListContainer/Productos';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 
+
+  
+
+
 function App() {
+
+
   return (
-    <div>
 
+    <BrowserRouter>
       <NavBar />
+      <Routes>
+          <Route path='/' element='' />
+      </Routes>
       <Titulo />
-
-      <div className='props-card'>
-        
-        <Idolos nombre= 'Paulo Silas' pais='Brasil' club='Barcelona' color='blue'/>
-        
-    </div>
-
-    <div className='props-card'>
-
-    <Idolos nombre= 'Leandro Romagnoli' pais='Argentina' club='San Lorenzo' color='red'/>
+      <Productos />
     
-    </div>
-
-    <div className='props-card'>
-
-    <Idolos nombre= 'Jose Sanfilipo' pais='Argentina' club='San Lorenzo' color='blue'/>
-
-    </div>
-      
-    </div>
+    </BrowserRouter>
   );
 }
 
