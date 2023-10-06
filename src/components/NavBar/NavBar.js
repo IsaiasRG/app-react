@@ -1,5 +1,5 @@
 import CartWidget from '../CartWidget/Cartwidget';
-import { Link, NavLink} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const router = [
   {
@@ -8,7 +8,7 @@ const router = [
   },
 
   {
-    path:'/productos',
+    path:'/producto',
     title: 'Productos',
   },
 
@@ -24,9 +24,22 @@ const NavBar = () => {
   return (
         <nav id="naveg">
           <ul className="lista-nav">
-          {router.map((route) => {
-          <Link to={route.path}  className="links">{route.title}</Link>
-            })}
+           <li>
+          <Link to='/'  className="links">Inicio</Link>
+
+           </li>
+           <li>
+          <Link to='/producto'  className="links">Productos</Link>
+
+           </li>
+           
+           <li>
+          <Link to='/'  className="links">..</Link>
+
+           </li>
+           
+           
+            
           </ul>
 
           <CartWidget />

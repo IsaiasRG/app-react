@@ -3,6 +3,7 @@ import NavBar from "../../NavBar/NavBar";
 <NavBar />
 
 const Inicio = () => {
+  return (
     <section>
         <article>
           <h1>
@@ -30,6 +31,8 @@ const Inicio = () => {
           </p>
           </article>
           </section>
+
+  )
 }
 
 

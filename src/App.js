@@ -1,8 +1,8 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import NavBar from './components/NavBar/NavBar';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Inicio from './components/pages/Inicio/Inicio';
-import Productos from './components/pages/ItemListContainer/Productos';
+import Tienda from './components/pages/ItemListContainer/ItemListContainer'
 import Item from './components/pages/Details/Item';
 import './App.css';
 
@@ -17,9 +17,8 @@ function App() {
       <NavBar />
       <Routes>
           <Route path='/' element = {<Inicio/>} />
-          {/* <Route path='/categorias' element = {<Categorias/>} /> */}
-          <Route path='/producto' element = {<Productos/>} />
-          <Route path='/producto/:id' element = {<Item/>} />
+          <Route path='/producto' element = {<Tienda/>} />
+          <Route path='/producto/:productoId' element = {<Item/>} />
       </Routes>
     </BrowserRouter>
   );
