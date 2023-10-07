@@ -18,7 +18,7 @@ function App() {
       <Routes>
           <Route path='/' element = {<Inicio/>} />
           <Route path='/producto' element = {<Tienda/>} />
-          <Route path='/producto/:productoId' element = {<Item/>} />
+          <Route path='/producto/:Id' element = {<Item/>} />
       </Routes>
     </BrowserRouter>
   );
