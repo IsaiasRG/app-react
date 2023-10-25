@@ -30,7 +30,7 @@ const Tienda = () => {
                   <h1 className="card-title">{nombre} </h1>
                   <p className="card-text">{precio} $</p>
                   <p className="card-text">{descripcion} </p>
-                  <Link to = {`/productos/${id}`} className="link">Ver mas detalles</Link>
+                  <Link to = {`/producto/:${id}`} className="link">Ver mas detalles</Link>
               </div>
           </div>
       </div>
